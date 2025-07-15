@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, jsonify
 import whisper
 import tempfile
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 # Whisperモデルを最初に一度だけロードする
 # アプリケーションの起動は少し遅くなるが、リクエストごとの処理は速くなる
